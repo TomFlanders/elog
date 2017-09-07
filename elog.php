@@ -28,19 +28,19 @@ function my_plugin_options() {
 		echo "<pre>" . file_get_contents($elog_filename) . "</pre>";
 
 	}
-	foreach (glob("../wp-content/error_log") as $elog_filename) {
+	foreach (glob("../*/error_log") as $elog_filename) {
 		echo "<br/>$elog_filename<br/>\n";
 		$elog_count++;
 		echo "<pre>" . file_get_contents($elog_filename) . "</pre>";
 
 	}
-	foreach (glob("../wp-content/*/error_log") as $elog_filename) {
+	foreach (glob("../*/*/error_log") as $elog_filename) {
 		echo "<br/>$elog_filename<br/>\n";
 		$elog_count++;
 		echo "<pre>" . file_get_contents($elog_filename) . "</pre>";
 
 	}
-	foreach (glob("../wp-content/*/*/error_log") as $elog_filename) {
+	foreach (glob("../*/*/*/error_log") as $elog_filename) {
 		echo "<br/>$elog_filename<br/>\n";
 		$elog_count++;
 		echo "<pre>" . file_get_contents($elog_filename) . "</pre>";
