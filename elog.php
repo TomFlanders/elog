@@ -1,9 +1,9 @@
 <?php
 /*
 Plugin Name: elog
-Plugin URI:  http://tomflanders.com/development/
+Plugin URI:  https://github.com/TomFlanders/elog
 Description: error_log reader
-Version:     0.5
+Version:     0.6
 Author:      Tom Flanders
 Author URI:  http://tomflanders.com
 License:     GPL3
@@ -23,6 +23,18 @@ function my_plugin_options() {
 	$elog_root = $_SERVER['DOCUMENT_ROOT'];
 	$elog_count = 0;
 	foreach (glob("../error_log") as $elog_filename) {
+		echo "<br/>$elog_filename<br/>\n";
+		$elog_count++;
+		echo "<pre>" . file_get_contents($elog_filename) . "</pre>";
+
+	}
+	foreach (glob("../wp-content/error_log") as $elog_filename) {
+		echo "<br/>$elog_filename<br/>\n";
+		$elog_count++;
+		echo "<pre>" . file_get_contents($elog_filename) . "</pre>";
+
+	}
+	foreach (glob("../wp-content/*/error_log") as $elog_filename) {
 		echo "<br/>$elog_filename<br/>\n";
 		$elog_count++;
 		echo "<pre>" . file_get_contents($elog_filename) . "</pre>";
