@@ -25,13 +25,13 @@ function my_plugin_options() {
 	$elog_folders = array("../error_log", "../*/error_log", "../*/*/error_log", "../*/*/*/error_log");
 	foreach($elog_folders as $elog_folder){
 		foreach (glob($elog_folder) as $elog_filename) {
+			if (strpos($elog_filename, 'backup') != true) {
 			echo "<br/>$elog_filename<br/>\n";
 			$elog_count++;
 			echo "<pre>" . file_get_contents($elog_filename) . "</pre>";
+			}
 		}
 	}
 	echo "<p>Logs found: " . $elog_count . "</p>";
 }
-
-
 ?>
