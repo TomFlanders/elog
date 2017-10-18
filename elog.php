@@ -22,7 +22,7 @@ function elog_menu() {
 function elog_options() {
 	$elog_root = $_SERVER['DOCUMENT_ROOT'];
 	$elog_count = 0;
-	$elog_folders = array("../error_log", "../wp-*/error_log", "../wp-*/*/error_log", "../wp-*/*/*/error_log");
+	$elog_folders = array("../error_log", "../wp-*/error_log", "../wp-*/*/error_log", "../wp-*/*/*/error_log","../php_errorlog", "../wp-*/php_errorlog", "../wp-*/*/php_errorlog", "../wp-*/*/*/php_errorlog");
 	foreach($elog_folders as $elog_folder){
 		foreach (glob($elog_folder) as $elog_filename) {
 			if (strpos($elog_filename, 'backup') != true) {
