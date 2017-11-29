@@ -3,11 +3,7 @@
 Plugin Name: elog
 Plugin URI:  https://github.com/TomFlanders/elog
 Description: error_log reader
-<<<<<<< HEAD
 Version:     1.0.0
-=======
-Version:     0.8.2
->>>>>>> d1c289290010e46829503c2135e47e8a95dae359
 Author:      Tom Flanders
 Author URI:  http://tomflanders.com
 License:     GPL3
