@@ -3,7 +3,11 @@
 Plugin Name: elog
 Plugin URI:  https://github.com/TomFlanders/elog
 Description: error_log reader
+<<<<<<< HEAD
 Version:     1.0.0
+=======
+Version:     0.8.2
+>>>>>>> d1c289290010e46829503c2135e47e8a95dae359
 Author:      Tom Flanders
 Author URI:  http://tomflanders.com
 License:     GPL3
@@ -15,11 +19,11 @@ add_action( 'admin_menu', 'elog_menu' );
 
 /** Create page */
 function elog_menu() {
-	add_menu_page( "elog", "elog", "manage_options", "elog display", 'my_plugin_options');
+	add_menu_page( "elog", "elog", "manage_options", "elog display", 'elog_options');
 }
 
 /** Add content to page */
-function my_plugin_options() {
+function elog_options() {
 	$elog_root = $_SERVER['DOCUMENT_ROOT'];
 	$elog_count = 0;
 	$elog_folders = array("../error_log", "../wp-*/error_log", "../wp-*/*/error_log", "../wp-*/*/*/error_log","../php_errorlog", "../wp-*/php_errorlog", "../wp-*/*/php_errorlog", "../wp-*/*/*/php_errorlog");
