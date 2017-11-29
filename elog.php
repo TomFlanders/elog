@@ -3,7 +3,7 @@
 Plugin Name: elog
 Plugin URI:  https://github.com/TomFlanders/elog
 Description: error_log reader
-Version:     0.7.2
+Version:     1.0.0
 Author:      Tom Flanders
 Author URI:  http://tomflanders.com
 License:     GPL3
@@ -22,11 +22,11 @@ function elog_menu() {
 function my_plugin_options() {
 	$elog_root = $_SERVER['DOCUMENT_ROOT'];
 	$elog_count = 0;
-	$elog_folders = array("../error_log", "../wp-*/error_log", "../wp-*/*/error_log", "../wp-*/*/*/error_log");
+	$elog_folders = array("../error_log", "../wp-*/error_log", "../wp-*/*/error_log", "../wp-*/*/*/error_log","../php_errorlog", "../wp-*/php_errorlog", "../wp-*/*/php_errorlog", "../wp-*/*/*/php_errorlog");
 	foreach($elog_folders as $elog_folder){
 		foreach (glob($elog_folder) as $elog_filename) {
 			if (strpos($elog_filename, 'backup') != true) {
-			echo "<br/>$elog_filename<br/>\n";
+			echo "<br/>$elog_filename<br/>";
 			$elog_count++;
 			echo "<pre>" . file_get_contents($elog_filename) . "</pre>";
 			}
@@ -34,4 +34,5 @@ function my_plugin_options() {
 	}
 	echo "<p>Logs found: " . $elog_count . "</p>";
 }
+
 ?>

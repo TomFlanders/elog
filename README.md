@@ -1,5 +1,5 @@
 # elog
-Show contents of error_log
+Show contents of error_log and php_errorlog
 
 ## Installation
 1. Download files to WordPressRoot/wp-content/plugins/elog.
@@ -12,4 +12,4 @@ Show contents of error_log
 GNU GENERAL PUBLIC LICENSE Version 3
 
 ## Author
-tom@tomflanders.com
+All images and code were created by tom@tomflanders.com
