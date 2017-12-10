@@ -20,7 +20,6 @@ function tpfelog_menu() {
 
 /** Add content to page */
 function tpfelog_options() {
-	$tpfelog_root = $_SERVER['DOCUMENT_ROOT'];
 	$tpfelog_count = 0;
 	$tpfelog_path = ABSPATH;
 	$tpfelog_pluginsPath = substr(plugin_dir_path(__FILE__), 0, -6);

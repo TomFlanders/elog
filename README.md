@@ -1,5 +1,5 @@
 # elog
-Show contents of error_log and php_errorlog in plugins and themes
+Show contents of error_log and php_errorlog in plugins, themes and root folders.
 
 ## Installation
 1. Download files to WordPressRoot/wp-content/plugins/elog.
