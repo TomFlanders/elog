@@ -22,5 +22,6 @@ Show contents of error_log and php_errorlog in plugins, themes and root folders.
 Does this work with multisite?
 No. That is in the works
 
+
 == Screenshots ==
 1. elog display
