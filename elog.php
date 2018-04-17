@@ -3,7 +3,7 @@
 Plugin Name: elog
 Plugin URI:  https://github.com/TomFlanders/elog
 Description: error_log reader
-Version:     1.0.0
+Version:     1.1.0
 Author:      Tom Flanders
 Author URI:  http://tomflanders.com
 License:     GPL3
@@ -31,6 +31,9 @@ function tpfelog_options() {
 	$tpfelog_themePath . "/error_log",
 	$tpfelog_themePath . "/php_errorlog"
  );
+ $tpfelog_admin_path = str_replace( get_bloginfo( 'url' ) . '/', ABSPATH, get_admin_url() );
+ array_push($tpfelog_folders, $tpfelog_admin_path . "/error_log");
+ array_push($tpfelog_folders, $tpfelog_admin_path . "/php_errorlog");
 
 /* Check each plugin */
  $tpfelog_plugins = array_slice(scandir($tpfelog_pluginsPath), 2);
