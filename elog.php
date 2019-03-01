@@ -32,8 +32,12 @@ function tpfelog_options() {
 	$tpfelog_themePath . "/php_errorlog"
  );
  $tpfelog_admin_path = str_replace( get_bloginfo( 'url' ) . '/', ABSPATH, get_admin_url() );
- array_push($tpfelog_folders, $tpfelog_admin_path . "/error_log");
- array_push($tpfelog_folders, $tpfelog_admin_path . "/php_errorlog");
+ array_push($tpfelog_folders, $tpfelog_admin_path . "error_log");
+ array_push($tpfelog_folders, $tpfelog_admin_path . "php_errorlog");
+
+ $tpfelog_include_path = str_replace( get_bloginfo( 'url' ) . '/', ABSPATH, '/home/tomfland/public_html/' );
+ array_push($tpfelog_folders, $tpfelog_include_path . "wp-includes/error_log");
+ array_push($tpfelog_folders, $tpfelog_include_path . "wp-includes/php_errorlog");
 
 /* Check each plugin */
  $tpfelog_plugins = array_slice(scandir($tpfelog_pluginsPath), 2);
@@ -55,6 +59,7 @@ foreach ($tpfelog_themes as $tpfelog_theme) {
 
 /* display files found */
 	foreach($tpfelog_folders as $tpfelog_folder){
+//		echo "<p>" . $tpfelog_folder . "</p>";
 		foreach (glob($tpfelog_folder) as $tpfelog_filename) {
 			if (strpos($tpfelog_filename, 'backup') != true) {
 			echo "<br/>$tpfelog_filename<br/>";
