@@ -24,6 +24,3 @@ No. That is in the works
 
 == Screenshots ==
 1. elog display
-
-== Debug ==
-Test 1
