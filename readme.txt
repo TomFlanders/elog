@@ -2,7 +2,7 @@
 Contributors: dogflanders
 Tags: error_log, php_errorlog
 Requires at least: 4.5
-Tested up to: 6.1
+Tested up to: 6.2
 Requires PHP: 5.6
 License: GPL3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
